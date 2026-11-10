@@ -1,0 +1,591 @@
+{
+  "generated_at": "2026-11-05T11:45:54+00:00",
+  "owid": {
+    "generated_at": "2026-11-05T11:45:53+00:00",
+    "rows": 629868,
+    "columns": 61,
+    "memory_mb": 428.1,
+    "date_min": "2020-01-01",
+    "date_max": "2026-10-18",
+    "duplicate_rows": 0,
+    "invalid_dates": 0,
+    "negative_cumulative_cases": 0,
+    "negative_cumulative_deaths": 0,
+    "deaths_greater_than_cases": 283,
+    "negative_daily_values": 0,
+    "missing_cells": 21134161,
+    "missing_pct": 55.01,
+    "schema": [
+      {
+        "column": "country",
+        "dtype": "object",
+        "non_null": 629868,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 262
+      },
+      {
+        "column": "date",
+        "dtype": "object",
+        "non_null": 629868,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 2483
+      },
+      {
+        "column": "total_cases",
+        "dtype": "float64",
+        "non_null": 617520,
+        "missing": 12348,
+        "missing_pct": 1.96,
+        "unique": 157764
+      },
+      {
+        "column": "new_cases",
+        "dtype": "float64",
+        "non_null": 612628,
+        "missing": 17240,
+        "missing_pct": 2.737,
+        "unique": 32911
+      },
+      {
+        "column": "new_cases_smoothed",
+        "dtype": "float64",
+        "non_null": 611419,
+        "missing": 18449,
+        "missing_pct": 2.929,
+        "unique": 56802
+      },
+      {
+        "column": "total_cases_per_million",
+        "dtype": "float64",
+        "non_null": 617520,
+        "missing": 12348,
+        "missing_pct": 1.96,
+        "unique": 199345
+      },
+      {
+        "column": "new_cases_per_million",
+        "dtype": "float64",
+        "non_null": 612628,
+        "missing": 17240,
+        "missing_pct": 2.737,
+        "unique": 120246
+      },
+      {
+        "column": "new_cases_smoothed_per_million",
+        "dtype": "float64",
+        "non_null": 611419,
+        "missing": 18449,
+        "missing_pct": 2.929,
+        "unique": 161465
+      },
+      {
+        "column": "total_deaths",
+        "dtype": "float64",
+        "non_null": 617520,
+        "missing": 12348,
+        "missing_pct": 1.96,
+        "unique": 63324
+      },
+      {
+        "column": "new_deaths",
+        "dtype": "float64",
+        "non_null": 613891,
+        "missing": 15977,
+        "missing_pct": 2.537,
+        "unique": 6119
+      },
+      {
+        "column": "new_deaths_smoothed",
+        "dtype": "float64",
+        "non_null": 612679,
+        "missing": 17189,
+        "missing_pct": 2.729,
+        "unique": 14643
+      },
+      {
+        "column": "total_deaths_per_million",
+        "dtype": "float64",
+        "non_null": 617520,
+        "missing": 12348,
+        "missing_pct": 1.96,
+        "unique": 123779
+      },
+      {
+        "column": "new_deaths_per_million",
+        "dtype": "float64",
+        "non_null": 613891,
+        "missing": 15977,
+        "missing_pct": 2.537,
+        "unique": 31882
+      },
+      {
+        "column": "new_deaths_smoothed_per_million",
+        "dtype": "float64",
+        "non_null": 612679,
+        "missing": 17189,
+        "missing_pct": 2.729,
+        "unique": 58972
+      },
+      {
+        "column": "excess_mortality",
+        "dtype": "float64",
+        "non_null": 13926,
+        "missing": 615942,
+        "missing_pct": 97.789,
+        "unique": 13611
+      },
+      {
+        "column": "excess_mortality_cumulative",
+        "dtype": "float64",
+        "non_null": 13926,
+        "missing": 615942,
+        "missing_pct": 97.789,
+        "unique": 4294
+      },
+      {
+        "column": "excess_mortality_cumulative_absolute",
+        "dtype": "float64",
+        "non_null": 13926,
+        "missing": 615942,
+        "missing_pct": 97.789,
+        "unique": 13678
+      },
+      {
+        "column": "excess_mortality_cumulative_per_million",
+        "dtype": "float64",
+        "non_null": 13892,
+        "missing": 615976,
+        "missing_pct": 97.794,
+        "unique": 13806
+      },
+      {
+        "column": "hosp_patients",
+        "dtype": "float64",
+        "non_null": 40656,
+        "missing": 589212,
+        "missing_pct": 93.545,
+        "unique": 10551
+      },
+      {
+        "column": "hosp_patients_per_million",
+        "dtype": "float64",
+        "non_null": 40656,
+        "missing": 589212,
+        "missing_pct": 93.545,
+        "unique": 26522
+      },
+      {
+        "column": "weekly_hosp_admissions",
+        "dtype": "float64",
+        "non_null": 24497,
+        "missing": 605371,
+        "missing_pct": 96.111,
+        "unique": 8304
+      },
+      {
+        "column": "weekly_hosp_admissions_per_million",
+        "dtype": "float64",
+        "non_null": 24497,
+        "missing": 605371,
+        "missing_pct": 96.111,
+        "unique": 17414
+      },
+      {
+        "column": "icu_patients",
+        "dtype": "float64",
+        "non_null": 39116,
+        "missing": 590752,
+        "missing_pct": 93.79,
+        "unique": 4133
+      },
+      {
+        "column": "icu_patients_per_million",
+        "dtype": "float64",
+        "non_null": 39116,
+        "missing": 590752,
+        "missing_pct": 93.79,
+        "unique": 13278
+      },
+      {
+        "column": "weekly_icu_admissions",
+        "dtype": "float64",
+        "non_null": 10993,
+        "missing": 618875,
+        "missing_pct": 98.255,
+        "unique": 1676
+      },
+      {
+        "column": "weekly_icu_admissions_per_million",
+        "dtype": "float64",
+        "non_null": 10993,
+        "missing": 618875,
+        "missing_pct": 98.255,
+        "unique": 4365
+      },
+      {
+        "column": "stringency_index",
+        "dtype": "float64",
+        "non_null": 202760,
+        "missing": 427108,
+        "missing_pct": 67.809,
+        "unique": 4897
+      },
+      {
+        "column": "reproduction_rate",
+        "dtype": "float64",
+        "non_null": 185683,
+        "missing": 444185,
+        "missing_pct": 70.52,
+        "unique": 19815
+      },
+      {
+        "column": "total_tests",
+        "dtype": "float64",
+        "non_null": 79387,
+        "missing": 550481,
+        "missing_pct": 87.396,
+        "unique": 78045
+      },
+      {
+        "column": "new_tests",
+        "dtype": "float64",
+        "non_null": 75403,
+        "missing": 554465,
+        "missing_pct": 88.029,
+        "unique": 38683
+      },
+      {
+        "column": "total_tests_per_thousand",
+        "dtype": "float64",
+        "non_null": 79387,
+        "missing": 550481,
+        "missing_pct": 87.396,
+        "unique": 72348
+      },
+      {
+        "column": "new_tests_per_thousand",
+        "dtype": "float64",
+        "non_null": 75403,
+        "missing": 554465,
+        "missing_pct": 88.029,
+        "unique": 12374
+      },
+      {
+        "column": "new_tests_smoothed",
+        "dtype": "float64",
+        "non_null": 103965,
+        "missing": 525903,
+        "missing_pct": 83.494,
+        "unique": 44392
+      },
+      {
+        "column": "new_tests_smoothed_per_thousand",
+        "dtype": "float64",
+        "non_null": 103965,
+        "missing": 525903,
+        "missing_pct": 83.494,
+        "unique": 13002
+      },
+      {
+        "column": "positive_rate",
+        "dtype": "float64",
+        "non_null": 101560,
+        "missing": 528308,
+        "missing_pct": 83.876,
+        "unique": 99102
+      },
+      {
+        "column": "tests_per_case",
+        "dtype": "float64",
+        "non_null": 100650,
+        "missing": 529218,
+        "missing_pct": 84.02,
+        "unique": 99912
+      },
+      {
+        "column": "total_vaccinations",
+        "dtype": "float64",
+        "non_null": 83222,
+        "missing": 546646,
+        "missing_pct": 86.787,
+        "unique": 80589
+      },
+      {
+        "column": "people_vaccinated",
+        "dtype": "float64",
+        "non_null": 79011,
+        "missing": 550857,
+        "missing_pct": 87.456,
+        "unique": 73722
+      },
+      {
+        "column": "people_fully_vaccinated",
+        "dtype": "float64",
+        "non_null": 77011,
+        "missing": 552857,
+        "missing_pct": 87.773,
+        "unique": 69747
+      },
+      {
+        "column": "total_boosters",
+        "dtype": "float64",
+        "non_null": 58784,
+        "missing": 571084,
+        "missing_pct": 90.667,
+        "unique": 47063
+      },
+      {
+        "column": "new_vaccinations",
+        "dtype": "float64",
+        "non_null": 68876,
+        "missing": 560992,
+        "missing_pct": 89.065,
+        "unique": 45827
+      },
+      {
+        "column": "new_vaccinations_smoothed",
+        "dtype": "float64",
+        "non_null": 202840,
+        "missing": 427028,
+        "missing_pct": 67.796,
+        "unique": 117594
+      },
+      {
+        "column": "total_vaccinations_per_hundred",
+        "dtype": "float64",
+        "non_null": 83222,
+        "missing": 546646,
+        "missing_pct": 86.787,
+        "unique": 80927
+      },
+      {
+        "column": "people_vaccinated_per_hundred",
+        "dtype": "float64",
+        "non_null": 79011,
+        "missing": 550857,
+        "missing_pct": 87.456,
+        "unique": 73890
+      },
+      {
+        "column": "people_fully_vaccinated_per_hundred",
+        "dtype": "float64",
+        "non_null": 77011,
+        "missing": 552857,
+        "missing_pct": 87.773,
+        "unique": 70100
+      },
+      {
+        "column": "total_boosters_per_hundred",
+        "dtype": "float64",
+        "non_null": 58784,
+        "missing": 571084,
+        "missing_pct": 90.667,
+        "unique": 49027
+      },
+      {
+        "column": "new_vaccinations_smoothed_per_million",
+        "dtype": "float64",
+        "non_null": 202840,
+        "missing": 427028,
+        "missing_pct": 67.796,
+        "unique": 133406
+      },
+      {
+        "column": "new_people_vaccinated_smoothed",
+        "dtype": "float64",
+        "non_null": 202840,
+        "missing": 427028,
+        "missing_pct": 67.796,
+        "unique": 96389
+      },
+      {
+        "column": "new_people_vaccinated_smoothed_per_hundred",
+        "dtype": "float64",
+        "non_null": 202840,
+        "missing": 427028,
+        "missing_pct": 67.796,
+        "unique": 120631
+      },
+      {
+        "column": "code",
+        "dtype": "object",
+        "non_null": 603684,
+        "missing": 26184,
+        "missing_pct": 4.157,
+        "unique": 247
+      },
+      {
+        "column": "continent",
+        "dtype": "object",
+        "non_null": 583844,
+        "missing": 46024,
+        "missing_pct": 7.307,
+        "unique": 6
+      },
+      {
+        "column": "population",
+        "dtype": "float64",
+        "non_null": 611076,
+        "missing": 18792,
+        "missing_pct": 2.983,
+        "unique": 249
+      },
+      {
+        "column": "population_density",
+        "dtype": "float64",
+        "non_null": 601153,
+        "missing": 28715,
+        "missing_pct": 4.559,
+        "unique": 245
+      },
+      {
+        "column": "median_age",
+        "dtype": "float64",
+        "non_null": 603636,
+        "missing": 26232,
+        "missing_pct": 4.165,
+        "unique": 243
+      },
+      {
+        "column": "life_expectancy",
+        "dtype": "float64",
+        "non_null": 606116,
+        "missing": 23752,
+        "missing_pct": 3.771,
+        "unique": 247
+      },
+      {
+        "column": "gdp_per_capita",
+        "dtype": "float64",
+        "non_null": 505505,
+        "missing": 124363,
+        "missing_pct": 19.744,
+        "unique": 205
+      },
+      {
+        "column": "extreme_poverty",
+        "dtype": "float64",
+        "non_null": 404733,
+        "missing": 225135,
+        "missing_pct": 35.743,
+        "unique": 154
+      },
+      {
+        "column": "diabetes_prevalence",
+        "dtype": "float64",
+        "non_null": 530329,
+        "missing": 99539,
+        "missing_pct": 15.803,
+        "unique": 128
+      },
+      {
+        "column": "handwashing_facilities",
+        "dtype": "float64",
+        "non_null": 306501,
+        "missing": 323367,
+        "missing_pct": 51.339,
+        "unique": 122
+      },
+      {
+        "column": "hospital_beds_per_thousand",
+        "dtype": "float64",
+        "non_null": 429511,
+        "missing": 200357,
+        "missing_pct": 31.809,
+        "unique": 154
+      },
+      {
+        "column": "human_development_index",
+        "dtype": "float64",
+        "non_null": 0,
+        "missing": 629868,
+        "missing_pct": 100.0,
+        "unique": 0
+      }
+    ],
+    "processed_rows": 620753,
+    "processed_columns": 43,
+    "countries": 238,
+    "entities": 254,
+    "processed_date_min": "2020-01-01",
+    "processed_date_max": "2026-10-18",
+    "processed_missing_pct": 31.88
+  },
+  "india": {
+    "generated_at": "2026-11-05T11:45:54+00:00",
+    "rows": 16060,
+    "columns": 7,
+    "memory_mb": 2.54,
+    "date_min": "2020-01-30",
+    "date_max": "2021-06-01",
+    "duplicate_rows": 0,
+    "states": 36,
+    "entities": 38,
+    "processed_rows": 18582,
+    "missing_cells": 763,
+    "missing_pct": 0.68,
+    "schema": [
+      {
+        "column": "Date",
+        "dtype": "object",
+        "non_null": 16060,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 461
+      },
+      {
+        "column": "State",
+        "dtype": "object",
+        "non_null": 16060,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 38
+      },
+      {
+        "column": "Confirmed",
+        "dtype": "int64",
+        "non_null": 16060,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 13018
+      },
+      {
+        "column": "Recovered",
+        "dtype": "int64",
+        "non_null": 16060,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 12422
+      },
+      {
+        "column": "Deceased",
+        "dtype": "int64",
+        "non_null": 16060,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 5688
+      },
+      {
+        "column": "Other",
+        "dtype": "int64",
+        "non_null": 16060,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "unique": 990
+      },
+      {
+        "column": "Tested",
+        "dtype": "float64",
+        "non_null": 15297,
+        "missing": 763,
+        "missing_pct": 4.751,
+        "unique": 14139
+      }
+    ],
+    "recoveries_coverage_pct": 100.0,
+    "negative_daily_rows": 43,
+    "note": "covid19india.org was a volunteer-led aggregator. The public CSV archive available for this project ends on 1 June 2021; values are reported, retrospective revisions are possible."
+  }
+}

@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Large raw downloads (recreated automatically by the loader)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/india_states.csv
+!data/raw/india_states.geojson
+
+# Temporary files
+*.part
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
